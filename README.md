@@ -21,11 +21,26 @@ scripts/
   validate.mjs         manifest + skill validation, no dependencies
 .github/workflows/
   validate.yml         runs the validator on push and pull request
+docs/
+  SOP-00-OVERVIEW.md   the stack, who does what, and the order to set it up
+  SOP-01-LINEAR.md     Linear queue: team, states, labels, intake template
+  SOP-02-CLAUDE-TAG.md install the reviewer in Slack + connect it to Linear
+  SOP-03-RUN-A-REVIEW.md operator runbook (hand this to procurement)
+  SOP-04-SKILL.md      the skill: decision logic, how to change it, what to build next
 ```
 
-## Installing
+## Setup SOPs (start here)
 
-**Slack (the path procurement uses):** follow **[docs/SOP-SLACK-SETUP.md](docs/SOP-SLACK-SETUP.md)** on the work laptop — clone, push a private copy to the work GitHub org, register it with Claude Tag, attach the plugin to a private-channel access bundle. Cursor Slack and Linear Slack are not this bot; the SOP says why.
+The setup is split into numbered SOPs under [`docs/`](docs/). Run them in order;
+**[docs/SOP-00-OVERVIEW.md](docs/SOP-00-OVERVIEW.md)** explains the whole stack
+and who runs each step. In short: **Linear** holds the ticket, **Claude Tag**
+(`@Claude`) reads the packet and writes the decision back onto the issue, and
+**Cursor** is only for changing the skill. Cursor and Linear are not the
+reviewer — SOP-00 says why.
+
+## Installing (reference)
+
+The SOPs are the real instructions; this section is the condensed version.
 
 ### Claude in Slack (Claude Tag)
 

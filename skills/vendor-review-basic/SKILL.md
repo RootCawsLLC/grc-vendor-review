@@ -46,6 +46,7 @@ Copy this checklist and tick as you go:
 - [ ] Step 4 — Public sources
 - [ ] Step 5 — Decision
 - [ ] Step 6 — Report
+- [ ] Step 7 — Post to the tracker (only if a tracker connector is available)
 ```
 
 ### Step 1 — Engagement
@@ -270,6 +271,34 @@ trigger; `note` = context that did not move the status.
 {One short paragraph naming the highest-severity trigger that fired, or
 stating that no trigger fired.}
 ```
+
+### Step 7 — Post to the tracker (conditional)
+
+Do this **only when a work-tracker connector (for example Linear) is available
+in the session and the request references a tracker item.** If there is no
+tracker, stop after Step 6 and reply with the report in the thread.
+
+The tracker is the system of record; the chat thread is not. When a tracker is
+present:
+
+- Post the **full Step 6 report as a comment** on the referenced item. The
+  report body is unchanged — still no mention of auditors or process.
+- Set the item's status from the outcome, using the states the org configured:
+  - **Approved** → the "Approved" state
+  - **Approved with Risks** → the "Approved with Risks" state (or, if the org
+    has none, leave it in review and say so in the comment)
+  - **Rejected** → the "Rejected" state
+- For each line under **Items for Human Review**, create one sub-item / task on
+  the tracker, titled with the specific action, and assign it to the review
+  owner named in the request. If no owner is named, leave them unassigned and
+  say so.
+- **Never close or resolve the item.** A named human closes it. Approved with
+  Risks and Rejected always leave the human-review sub-items open.
+- Do not move an item to a state the org has not defined; report the mismatch
+  in the comment instead of guessing.
+
+If the connector write fails, say so plainly and leave the full report in the
+thread so nothing is lost.
 
 ## Limits
 
