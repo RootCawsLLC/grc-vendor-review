@@ -1,0 +1,18 @@
+{
+  "name": "grc-eng",
+  "owner": {
+    "name": "RootCawsLLC",
+    "email": "317738477+RootCawsLLC@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Single-plugin marketplace for first-pass vendor security review."
+  },
+  "plugins": [
+    {
+      "name": "grc-vendor-review",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "First-pass vendor security review: Approved, Approved with Risks, or Rejected from submitted evidence and public sources."
+    }
+  ]
+}

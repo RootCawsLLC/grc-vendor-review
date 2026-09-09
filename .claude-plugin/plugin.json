@@ -1,0 +1,17 @@
+{
+  "name": "grc-vendor-review",
+  "displayName": "GRC Vendor Review",
+  "version": "0.1.0",
+  "description": "First-pass vendor security review: Approved, Approved with Risks, or Rejected from submitted evidence and public sources.",
+  "author": {
+    "name": "RootCawsLLC",
+    "email": "317738477+RootCawsLLC@users.noreply.github.com"
+  },
+  "keywords": [
+    "vendor-review",
+    "grc",
+    "soc2",
+    "iso27001",
+    "third-party-risk"
+  ]
+}
